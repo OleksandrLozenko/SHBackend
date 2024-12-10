@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from db_set import Session
 from schemas import UserModel, UpdateUser, ResponseMesageAllUsers, ResponseMessage
 import models
+import os
 
 app = FastAPI()
 
@@ -99,4 +100,5 @@ app.add_middleware(
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("main:app", host="0.0.0.0", port=8000)
+    port = int(os.environ.get("PORT", 8080))
+    uvicorn.run(app, host="0.0.0.0", port=port)
