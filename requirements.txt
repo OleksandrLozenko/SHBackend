@@ -3,10 +3,9 @@ asgiref==3.5.0
 autopep8==1.6.0
 click==8.0.4
 colorama==0.4.4
-fastapi==0.75.0
-greenlet==1.1.2
+fastapi==0.95.0  # Обновление для совместимости
+greenlet==2.0.2  # Исправление ошибок
 h11==0.13.0
-httptools==0.4.0
 idna==3.3
 mysqlclient==2.1.0
 pycodestyle==2.8.0
@@ -14,10 +13,10 @@ pydantic==1.9.0
 python-dotenv==0.19.2
 PyYAML==6.0
 sniffio==1.2.0
-SQLAlchemy==1.4.32
+SQLAlchemy==1.4.41  # Совместимая версия с greenlet
 starlette==0.17.1
 toml==0.10.2
 typing_extensions==4.1.1
-uvicorn==0.17.6
+uvicorn==0.22.0  # Обновление Uvicorn
 watchgod==0.7
 websockets==10.2
